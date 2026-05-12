@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO_URL="https://github.com/wwnbb/agent_based"
+REPO_URL="https://github.com/wwnbb/based_agents"
 REF="master"
 
 TEMP_DIR=""
@@ -39,7 +39,7 @@ download_source_root() {
   command -v tar >/dev/null 2>&1 || die "tar is required"
 
   local archive_path entry found
-  TEMP_DIR=$(mktemp -d 2>/dev/null || mktemp -d -t based-agent-framework)
+  TEMP_DIR=$(mktemp -d 2>/dev/null || mktemp -d -t based-agents)
   archive_path="$TEMP_DIR/source.tar.gz"
 
   curl -fsSL "$REPO_URL/archive/$REF.tar.gz" -o "$archive_path"
@@ -71,7 +71,7 @@ resolve_source_root() {
 }
 
 SOURCE_ROOT=$(resolve_source_root)
-MIGRATION_ROOT="$TARGET_ROOT/.migration/based-agent-framework-$(date +%Y%m%d%H%M%S)"
+MIGRATION_ROOT="$TARGET_ROOT/.migration/based-agents-$(date +%Y%m%d%H%M%S)"
 
 target_rel() {
   case "$1" in
