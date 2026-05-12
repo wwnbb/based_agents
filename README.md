@@ -2,7 +2,7 @@
 
 A spec-oriented agent framework for bootstrapping agent-driven software projects.
 
-Agent definitions live in `agents/` in this repository. The install script deploys them into `.agents/agents/` in the target project so new projects can follow:
+Agent definitions live in `agents/` in this repository. The install script deploys them into `.opencode/agents/` in the target project so new projects can follow:
 
 ```text
 task -> spec -> implementation
