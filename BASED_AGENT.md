@@ -194,10 +194,9 @@ Each new spec version should explain:
 
 ```text
 .
-├── .agents/
-│   └── agents/
-│       ├── ARCHITECT.md
-│       └── ORCESTRATOR.md
+├── agents/
+│   ├── ARCHITECT.md
+│   └── ORCESTRATOR.md
 ├── specs/
 │   └── <feature-id>/
 │       ├── 001-initial-spec.md

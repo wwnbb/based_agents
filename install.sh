@@ -173,10 +173,10 @@ copy_tree() {
 }
 
 log "Installing BASED Agent Framework"
-log "Target: $TARGET_ROOT/.opencode/agents"
+log "Target: $TARGET_ROOT/.agents/agents"
 
-[ -d "$SOURCE_ROOT/.agents" ] || die "framework source must contain .agents/"
-copy_tree "$SOURCE_ROOT/.agents" "$TARGET_ROOT/.opencode/agents"
+[ -d "$SOURCE_ROOT/agents" ] || die "framework source must contain agents/"
+copy_tree "$SOURCE_ROOT/agents" "$TARGET_ROOT/.agents/agents"
 ensure_dir "$TARGET_ROOT/specs"
 ensure_dir "$TARGET_ROOT/llm_context"
 
